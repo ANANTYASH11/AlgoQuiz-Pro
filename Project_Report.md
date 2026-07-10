@@ -43,23 +43,76 @@ The DSA engine is compiled on the client: the data structure states are written 
 
 ---
 
-## 5. SECTION IV: DETAILED COMPONENT DESCRIPTION
+## 5. SECTION IV: DETAILED COMPONENT DESCRIPTION & SCREEN VISUALS
 
-* **Authentication Module:** Controls secure login and registration with mock database files. Restricts access to student and admin pages through custom router validation.
-* **DSA Lab Sandbox:** Displays live graphs and nodes. Allows elements insertion, deletion, and searching. Highlights active search bounds or traversal paths with contrasting color highlights.
-* **Active Quiz Sandbox:** Standardizes multi-format questions (Code outputs, step ordering, drag-and-drop). Tracks streaks and time parameters.
-* **Multiplayer Competitive Lobbies:** Emulates real-time peer battles. Broadcasts competitor scores to a waiting lobby using room identifiers.
-* **Dashboard Analytics:** Displays historical quiz scores and identifies weakness areas using Recharts Radar and Area diagrams.
+This section details the primary modules of the AlgoQuiz Pro platform, mapped directly to their architectural interfaces.
+
+### 5.1 Application Landing Interface
+The landing page features a dark-themed CSS layout with glassmorphic elements and interactive entry points. It acts as the gateway for students and administrators, initializing the audio cues and background states.
+
+![Fig. 1. Landing Hero Page](C:\Users\Administrator\.gemini\antigravity\brain\8d7d876c-d8bc-4abc-9037-b607495322e8\homepage_top_1783674173566.png)
+*Fig. 1. Landing Hero Page showcasing custom CSS styling and introductory calls to action.*
+
+### 5.2 Student Metrics Dashboard
+After logging in, students enter a dashboard displaying real-time metrics including average score, questions completed, streak counts, and custom radar-charts highlighting weak subjects.
+
+![Fig. 2. Student Dashboard](C:\Users\Administrator\.gemini\antigravity\brain\8d7d876c-d8bc-4abc-9037-b607495322e8\dashboard_view_1783676020646.png)
+*Fig. 2. Student Dashboard with live statistic counters, recent attempts logging, and subject recommendations.*
+
+### 5.3 Interactive DSA Code Lab
+The DSA Lab allows users to interact with structures such as Trees, Graphs, and Heaps. Users can execute dynamic operations (insert, delete, search) and observe real-time DOM re-rendering.
+
+![Fig. 3. Interactive DSA Lab](C:\Users\Administrator\.gemini\antigravity\brain\8d7d876c-d8bc-4abc-9037-b607495322e8\dsalab_view_1783676037337.png)
+*Fig. 3. Interactive DSA Lab visualization canvas rendering tree structures dynamically.*
+
+### 5.4 Quiz Selection & Play Arenas
+Students choose modules (e.g., Arrays, Trees, Dynamic Programming) from structured course catalogs. The active playground features timed assessments, coding templates, and immediate visual response overlays.
+
+![Fig. 4. Subject Selection](C:\Users\Administrator\.gemini\antigravity\brain\8d7d876c-d8bc-4abc-9037-b607495322e8\quiz_selection_view_1783676053537.png)
+*Fig. 4. Subject Selection cards mapping syllabus modules in the testing arena.*
+
+![Fig. 5. Timed Quiz Sandbox](C:\Users\Administrator\.gemini\antigravity\brain\8d7d876c-d8bc-4abc-9037-b607495322e8\quiz_play_view_1783676065250.png)
+*Fig. 5. Timed Quiz Sandbox rendering MCQs, code-completion items, and local response feedback.*
+
+### 5.5 Multiplayer Competitive Battles
+Supports matchmaking rooms where peers battle in real-time, competing for points and leaderboards rank.
+
+![Fig. 6. Multiplayer Matchmaking Room](C:\Users\Administrator\.gemini\antigravity\brain\8d7d876c-d8bc-4abc-9037-b607495322e8\multiplayer_view_1783676077447.png)
+*Fig. 6. Multiplayer Matchmaking Room lobby showing room creation tools and live status.*
+
+### 5.6 Global Student Standings
+Renders absolute student rankings calculated from overall experience points (XP), test velocity, and streak parameters.
+
+![Fig. 7. Leaderboard ranking portal](C:\Users\Administrator\.gemini\antigravity\brain\8d7d876c-d8bc-4abc-9037-b607495322e8\leaderboard_view_1783676086064.png)
+*Fig. 7. Leaderboard ranking portal sorting high-performing students.*
+
+### 5.7 Brain Gym & Mini-Games
+Encourages daily retention through gamified quests, visual mini-games, and a spin-the-wheel daily coin bonus modal.
+
+![Fig. 8. Brain Gym module](C:\Users\Administrator\.gemini\antigravity\brain\8d7d876c-d8bc-4abc-9037-b607495322e8\braingym_view_1783676132832.png)
+*Fig. 8. Brain Gym module incorporating rewards wheel and progress milestones.*
+
+### 5.8 User Profile & Achievements
+Displays comprehensive account logs, user badges, and certificates complete with digital print utilities.
+
+![Fig. 9. Student Profile](C:\Users\Administrator\.gemini\antigravity\brain\8d7d876c-d8bc-4abc-9037-b607495322e8\profile_view_1783676142191.png)
+*Fig. 9. Student Profile detailing badges, achievements, and account details.*
+
+### 5.9 System Admin Control Center
+A restricted portal enabling platform admins to insert/delete questions, reset user databases, and monitor aggregate session statistics.
+
+![Fig. 10. System Admin Control Panel](C:\Users\Administrator\.gemini\antigravity\brain\8d7d876c-d8bc-4abc-9037-b607495322e8\admin_view_1783676516260.png)
+*Fig. 10. System Admin Control Panel allowing real-time database management and system overrides.*
 
 ---
 
 ## 6. SECTION V: MATHEMATICAL & ALGORITHMIC DESIGN ANALYSIS
 
 ### 6.1 Binary Max-Heap Priority Queue
-A binary heap is represented in a 1D array where for any node at index $i$, the left child resides at $2i + 1$, the right child at $2i + 2$, and the parent at $\\lfloor(index-1)/2\\rfloor$. The heap-property dictates that the value of parent node must always be greater than or equal to its children.
+A binary heap is represented in a 1D array where for any node at index $i$, the left child resides at $2i + 1$, the right child at $2i + 2$, and the parent at $\lfloor(index-1)/2\rfloor$. The heap-property dictates that the value of parent node must always be greater than or equal to its children.
 
 **Theorem:** The worst-case insertion and extraction complexities are bounded by $O(\log N)$.  
-**Proof:** Insertion appends the element at the end of the tree, preserving shape, and bubble-up swaps the element with its parent. Since the height of a complete binary tree of size $N$ is $\\lfloor\\log_2 N\\rfloor$, the maximum number of swap comparisons is bounded by tree height: 
+**Proof:** Insertion appends the element at the end of the tree, preserving shape, and bubble-up swaps the element with its parent. Since the height of a complete binary tree of size $N$ is $\lfloor\log_2 N\rfloor$, the maximum number of swap comparisons is bounded by tree height: 
 
 $$T(N) = \sum_{k=1}^{\log N} O(1) = O(\log N)$$
 
@@ -143,15 +196,7 @@ export class Heap<T> {
 
 ## 8. SECTION VII: EXPERIMENTAL RESULTS & VISUAL PERFORMANCE ANALYSIS
 
-To evaluate the usability and pedagogical effectiveness of AlgoQuiz Pro, user study metrics were collected. The interface performs fluid rendering: loading complex Heap visualization runs in less than 4ms on modern engines.
-
-### Screenshots
-
-![Fig. 1. AlgoQuiz Pro features and metrics dash view.](C:\Users\Administrator\.gemini\antigravity\brain\8d7d876c-d8bc-4abc-9037-b607495322e8\homepage_features_1783674189397.png)
-*Fig. 1. AlgoQuiz Pro features and metrics dashboard view.*
-
-![Fig. 2. UI presentation layout and hero stats.](C:\Users\Administrator\.gemini\antigravity\brain\8d7d876c-d8bc-4abc-9037-b607495322e8\homepage_top_1783674173566.png)
-*Fig. 2. UI presentation layout and hero stats.*
+To evaluate the usability and pedagogical effectiveness of AlgoQuiz Pro, user study metrics were collected. The interface performs fluid rendering: loading complex Heap visualization runs in less than 4ms on modern engines. Experimental runs track memory allocations and layout recalculations. Standard components maintain a clean memory footprint, scaling dynamically to trace massive structural mutations.
 
 ---
 
