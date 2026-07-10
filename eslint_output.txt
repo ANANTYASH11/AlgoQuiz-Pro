@@ -1,0 +1,512 @@
+
+C:\Quiz Application\src\app\admin\page.tsx
+   17:3   warning  'AlertTriangle' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   47:5   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Quiz Application\src\app\admin\page.tsx:47:5
+  45 |     }
+  46 |
+> 47 |     setQuestionsList(MockDatabase.getQuestions());
+     |     ^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  48 |     setDsaLogs(MockDatabase.getDsaExecutionLogs());
+  49 |   }, [user, router]);
+  50 |  react-hooks/set-state-in-effect
+  106:26  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+  114:19  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+  133:21  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+  161:19  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+  264:68  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+
+C:\Quiz Application\src\app\api\attempts\route.ts
+  17:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  41:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Quiz Application\src\app\api\auth\login\route.ts
+  50:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Quiz Application\src\app\api\auth\signup\route.ts
+  70:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Quiz Application\src\app\api\questions\route.ts
+  25:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Quiz Application\src\app\api\user\route.ts
+  40:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Quiz Application\src\app\auth\page.tsx
+   14:3   warning  'Smile' is defined but never used                                @typescript-eslint/no-unused-vars
+   84:14  warning  'err' is defined but never used                                  @typescript-eslint/no-unused-vars
+  139:14  warning  'err' is defined but never used                                  @typescript-eslint/no-unused-vars
+  192:72  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  192:91  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  420:21  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Quiz Application\src\app\brain-gym\page.tsx
+   13:3   warning  'Sparkles' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+   14:3   warning  'Gamepad2' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+   17:3   warning  'TrendingUp' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+   18:3   warning  'Volume2' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-unused-vars
+   20:8   warning  'Link' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-unused-vars
+  136:74  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+  157:20  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Quiz Application\src\app\brain-gym\page.tsx:157:20
+  155 |
+  156 |   const generateProblem = () => {
+> 157 |     const isMult = Math.random() > 0.5;
+      |                    ^^^^^^^^^^^^^ Cannot call impure function
+  158 |     let a = 0;
+  159 |     let b = 0;
+  160 |     let answer = 0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react-hooks/purity
+  164:22  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Quiz Application\src\app\brain-gym\page.tsx:164:22
+  162 |
+  163 |     if (isMult) {
+> 164 |       a = Math.floor(Math.random() * 9) + 2; // 2 to 10
+      |                      ^^^^^^^^^^^^^ Cannot call impure function
+  165 |       b = Math.floor(Math.random() * 9) + 2; // 2 to 10
+  166 |       answer = a * b;
+  167 |       currentOp = "×";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   react-hooks/purity
+  165:22  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Quiz Application\src\app\brain-gym\page.tsx:165:22
+  163 |     if (isMult) {
+  164 |       a = Math.floor(Math.random() * 9) + 2; // 2 to 10
+> 165 |       b = Math.floor(Math.random() * 9) + 2; // 2 to 10
+      |                      ^^^^^^^^^^^^^ Cannot call impure function
+  166 |       answer = a * b;
+  167 |       currentOp = "×";
+  168 |     } else {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      react-hooks/purity
+  169:22  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Quiz Application\src\app\brain-gym\page.tsx:169:22
+  167 |       currentOp = "×";
+  168 |     } else {
+> 169 |       a = Math.floor(Math.random() * 80) + 10; // 10 to 90
+      |                      ^^^^^^^^^^^^^ Cannot call impure function
+  170 |       b = Math.floor(Math.random() * 80) + 10; // 10 to 90
+  171 |       answer = a + b;
+  172 |       currentOp = "+";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           react-hooks/purity
+  170:22  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Quiz Application\src\app\brain-gym\page.tsx:170:22
+  168 |     } else {
+  169 |       a = Math.floor(Math.random() * 80) + 10; // 10 to 90
+> 170 |       b = Math.floor(Math.random() * 80) + 10; // 10 to 90
+      |                      ^^^^^^^^^^^^^ Cannot call impure function
+  171 |       answer = a + b;
+  172 |       currentOp = "+";
+  173 |     }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            react-hooks/purity
+  184:34  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Quiz Application\src\app\brain-gym\page.tsx:184:34
+  182 |     optsSet.add(answer);
+  183 |     while (optsSet.size < 4) {
+> 184 |       const offset = (Math.floor(Math.random() * 15) + 1) * (Math.random() > 0.5 ? 1 : -1);
+      |                                  ^^^^^^^^^^^^^ Cannot call impure function
+  185 |       const val = answer + offset;
+  186 |       if (val > 0) optsSet.add(val);
+  187 |     }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    react-hooks/purity
+  184:62  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Quiz Application\src\app\brain-gym\page.tsx:184:62
+  182 |     optsSet.add(answer);
+  183 |     while (optsSet.size < 4) {
+> 184 |       const offset = (Math.floor(Math.random() * 15) + 1) * (Math.random() > 0.5 ? 1 : -1);
+      |                                                              ^^^^^^^^^^^^^ Cannot call impure function
+  185 |       const val = answer + offset;
+  186 |       if (val > 0) optsSet.add(val);
+  187 |     }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        react-hooks/purity
+  194:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Quiz Application\src\app\brain-gym\page.tsx:194:7
+  192 |     if (gameState !== "playing") return;
+  193 |     if (timeLeft <= 0) {
+> 194 |       setGameState("ended");
+      |       ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  195 |       playSound("win");
+  196 |       triggerConfetti();
+  197 |       // Reward user with gold coins (1 coin per 2 questions solved)                                                                                                                                                                                                                                                      react-hooks/set-state-in-effect
+  216:6   warning  React Hook useEffect has missing dependencies: 'playSound', 'score', 'triggerConfetti', 'updateUser', and 'user'. Either include them or remove the dependency array. If 'playSound' changes too often, find the parent component that defines it and wrap that definition in useCallback                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       react-hooks/exhaustive-deps
+  331:77  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+  337:5   error    Error: Cannot access variable before it is declared
+
+`generateTargetStack` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+C:\Quiz Application\src\app\brain-gym\page.tsx:337:5
+  335 |
+  336 |   useEffect(() => {
+> 337 |     generateTargetStack();
+      |     ^^^^^^^^^^^^^^^^^^^ `generateTargetStack` accessed before it is declared
+  338 |   }, []);
+  339 |
+  340 |   const generateTargetStack = () => {
+
+C:\Quiz Application\src\app\brain-gym\page.tsx:340:3
+  338 |   }, []);
+  339 |
+> 340 |   const generateTargetStack = () => {
+      |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 341 |     const colors: BlockType[] = ["Red", "Blue", "Yellow", "Green"];
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 342 |     const targetSize = Math.floor(Math.random() * 2) + 3; // Size 3 or 4
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 349 |     setStack([]);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 350 |   };
+      | ^^^^^ `generateTargetStack` is declared here
+  351 |
+  352 |   const handlePush = (color: BlockType) => {
+  353 |     if (stack.length >= 5) {                                                                                                   react-hooks/immutability
+  511:74  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+  518:5   error    Error: Cannot access variable before it is declared
+
+`generateTarget` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+C:\Quiz Application\src\app\brain-gym\page.tsx:518:5
+  516 |
+  517 |   useEffect(() => {
+> 518 |     generateTarget();
+      |     ^^^^^^^^^^^^^^ `generateTarget` accessed before it is declared
+  519 |   }, []);
+  520 |
+  521 |   const generateTarget = () => {
+
+C:\Quiz Application\src\app\brain-gym\page.tsx:521:3
+  519 |   }, []);
+  520 |
+> 521 |   const generateTarget = () => {
+      |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 522 |     const list = [12, 37, 25, 60, 85, 75];
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 523 |     const newTarget = list[Math.floor(Math.random() * list.length)];
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 524 |     setTargetVal(newTarget);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 525 |     setCurrentNode(SAMPLE_TREE);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 526 |     setPath([50]);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 527 |   };
+      | ^^^^^ `generateTarget` is declared here
+  528 |
+  529 |   const handleBranchSelect = (direction: "left" | "right") => {
+  530 |     const next = direction === "left" ? currentNode.left : currentNode.right;  react-hooks/immutability
+
+C:\Quiz Application\src\app\challenge\page.tsx
+   11:3   warning  'XCircle' is defined but never used                              @typescript-eslint/no-unused-vars
+   12:3   warning  'Cpu' is defined but never used                                  @typescript-eslint/no-unused-vars
+   16:3   warning  'HelpCircle' is defined but never used                           @typescript-eslint/no-unused-vars
+  287:73  error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  357:73  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  357:83  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Quiz Application\src\app\dashboard\page.tsx
+   13:3    warning  'ArrowRight' is defined but never used                                                                                                                 @typescript-eslint/no-unused-vars
+   16:3    warning  'ChevronRight' is defined but never used                                                                                                               @typescript-eslint/no-unused-vars
+   19:3    warning  'RotateCcw' is defined but never used                                                                                                                  @typescript-eslint/no-unused-vars
+  118:7    error    React Hook "useAppState" cannot be called inside a callback. React Hooks must be called in a React function component or a custom React Hook function  react-hooks/rules-of-hooks
+  135:100  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                        react/no-unescaped-entities
+  255:20   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                        react/no-unescaped-entities
+
+C:\Quiz Application\src\app\dsa-lab\page.tsx
+   3:20  warning  'useEffect' is defined but never used   @typescript-eslint/no-unused-vars
+   7:3   warning  'Code' is defined but never used        @typescript-eslint/no-unused-vars
+  10:3   warning  'Layers' is defined but never used      @typescript-eslint/no-unused-vars
+  11:3   warning  'GitCommit' is defined but never used   @typescript-eslint/no-unused-vars
+  12:3   warning  'GitMerge' is defined but never used    @typescript-eslint/no-unused-vars
+  13:3   warning  'Cpu' is defined but never used         @typescript-eslint/no-unused-vars
+  15:3   warning  'HelpCircle' is defined but never used  @typescript-eslint/no-unused-vars
+  17:3   warning  'ArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+  20:3   warning  'ArrowDown' is defined but never used   @typescript-eslint/no-unused-vars
+
+C:\Quiz Application\src\app\layout.tsx
+  22:9  warning  Custom fonts not added in `pages/_document.js` will only load for a single page. This is discouraged. See: https://nextjs.org/docs/messages/no-page-custom-font  @next/next/no-page-custom-font
+
+C:\Quiz Application\src\app\leaderboard\page.tsx
+   9:3  warning  'Search' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+  10:3  warning  'SlidersHorizontal' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+  14:3  warning  'Medal' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-unused-vars
+  15:3  warning  'Award' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-unused-vars
+  51:5  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Quiz Application\src\app\leaderboard\page.tsx:51:5
+  49 |     }
+  50 |
+> 51 |     setLeaderboardList(filtered);
+     |     ^^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  52 |
+  53 |     // INTEGRATION: Max Heap is used to extract the Top K (Top 3) students
+  54 |     const maxHeap = new Heap<LeaderboardUser>((a, b) => a.xp - b.xp);  react-hooks/set-state-in-effect
+
+C:\Quiz Application\src\app\multiplayer\page.tsx
+    8:3   warning  'Terminal' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   13:3   warning  'ShieldCheck' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+   15:3   warning  'Sparkles' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   16:3   warning  'Zap' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-unused-vars
+   47:26  warning  'setBattleQuestion' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+  101:13  error    Error: Cannot access variable before it is declared
+
+`handleFinishBattle` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+C:\Quiz Application\src\app\multiplayer\page.tsx:101:13
+   99 |           if (prev <= 1) {
+  100 |             clearInterval(interval);
+> 101 |             handleFinishBattle();
+      |             ^^^^^^^^^^^^^^^^^^ `handleFinishBattle` accessed before it is declared
+  102 |             return 0;
+  103 |           }
+  104 |           return prev - 1;
+
+C:\Quiz Application\src\app\multiplayer\page.tsx:207:3
+  205 |   };
+  206 |
+> 207 |   const handleFinishBattle = () => {
+      |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 208 |     playSound("win");
+      | ^^^^^^^^^^^^^^^^^^^^^
+> 209 |     triggerConfetti();
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^
+> 219 |     }
+      | ^^^^^^^^^^^^^^^^^^^^^
+> 220 |   };
+      | ^^^^^ `handleFinishBattle` is declared here
+  221 |
+  222 |   return (
+  223 |     <div className="space-y-8">  react-hooks/immutability
+  125:6   warning  React Hook useEffect has missing dependencies: 'handleFinishBattle' and 'playSound'. Either include them or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     react-hooks/exhaustive-deps
+  218:7   error    React Hook "useAppState" is called in function "handleFinishBattle" that is neither a React function component nor a custom React Hook function. React component names must start with an uppercase letter. React Hook names must start with the word "use"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 react-hooks/rules-of-hooks
+
+C:\Quiz Application\src\app\page.tsx
+   19:10  warning  'motion' is defined but never used                               @typescript-eslint/no-unused-vars
+  268:78  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  268:88  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Quiz Application\src\app\profile\page.tsx
+   5:10  warning  'MockDatabase' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+   8:3   warning  'Download' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  10:3   warning  'MapPin' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+  12:3   warning  'Trash2' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+  13:3   warning  'BookMarked' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+  15:3   warning  'Building' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  16:3   warning  'User' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+  36:10  warning  'certId' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+  48:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Quiz Application\src\app\profile\page.tsx:48:7
+  46 |     }
+  47 |     if (user) {
+> 48 |       setUsername(user.username);
+     |       ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  49 |       setEmail(user.email);
+  50 |     }
+  51 |   }, [user, router]);  react-hooks/set-state-in-effect
+  65:10  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    @typescript-eslint/no-explicit-any
+  75:50  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Quiz Application\src\app\profile\page.tsx:75:50
+  73 |     playSound("click");
+  74 |     // Generate a unique Certificate ID
+> 75 |     const randomId = "AQ-" + Math.floor(100000 + Math.random() * 900000).toString() + "-2026";
+     |                                                  ^^^^^^^^^^^^^ Cannot call impure function
+  76 |     setCertId(randomId);
+  77 |     setCertModalOpen(true);
+  78 |                                                                                                                                                                                                                                                        react-hooks/purity
+
+C:\Quiz Application\src\app\quiz\page.tsx
+   5:8  warning  'Link' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+  50:7  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Quiz Application\src\app\quiz\page.tsx:50:7
+  48 |     if (searchQuery.trim().length > 0) {
+  49 |       const suggestions = MockDatabase.searchTopics(searchQuery);
+> 50 |       setSearchSuggestions(suggestions.slice(0, 5));
+     |       ^^^^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  51 |     } else {
+  52 |       setSearchSuggestions([]);
+  53 |     }  react-hooks/set-state-in-effect
+
+C:\Quiz Application\src\app\quiz\play\page.tsx
+   13:3   warning  'Zap' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+   17:3   warning  'HelpCircle' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   @typescript-eslint/no-unused-vars
+   23:3   warning  'Terminal' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+   27:3   warning  'MessageSquare' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @typescript-eslint/no-unused-vars
+   36:40  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+   41:59  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+   72:5   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Quiz Application\src\app\quiz\play\page.tsx:72:5
+  70 |     }
+  71 |     const parsedConfig = JSON.parse(savedConfig);
+> 72 |     setConfig(parsedConfig);
+     |     ^^^^^^^^^ Avoid calling setState() directly within an effect
+  73 |
+  74 |     // Fetch all questions
+  75 |     const allQuestions = MockDatabase.getQuestions();                           react-hooks/set-state-in-effect
+  132:11  error    Error: Cannot access variable before it is declared
+
+`handleFinishQuiz` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+C:\Quiz Application\src\app\quiz\play\page.tsx:132:11
+  130 |         if (prev <= 1) {
+  131 |           clearInterval(interval);
+> 132 |           handleFinishQuiz();
+      |           ^^^^^^^^^^^^^^^^ `handleFinishQuiz` accessed before it is declared
+  133 |           return 0;
+  134 |         }
+  135 |         return prev - 1;
+
+C:\Quiz Application\src\app\quiz\play\page.tsx:371:3
+  369 |
+  370 |   // Submit complete quiz
+> 371 |   const handleFinishQuiz = () => {
+      |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 372 |     playSound("win");
+      | ^^^^^^^^^^^^^^^^^^^^^
+> 373 |     setQuizFinished(true);
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^
+> 410 |     triggerConfetti();
+      | ^^^^^^^^^^^^^^^^^^^^^
+> 411 |   };
+      | ^^^^^ `handleFinishQuiz` is declared here
+  412 |
+  413 |   // Formatted timer
+  414 |   const formatTime = (secs: number) => {  react-hooks/immutability
+  140:6   warning  React Hook useEffect has a missing dependency: 'handleFinishQuiz'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      react-hooks/exhaustive-deps
+  306:36  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  339:48  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  376:9   warning  'questionsAnswered' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   @typescript-eslint/no-unused-vars
+  396:11  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Quiz Application\src\app\quiz\play\page.tsx:396:11
+  394 |
+  395 |     const attempt = {
+> 396 |       id: Math.random().toString(36).substr(2, 9),
+      |           ^^^^^^^^^^^^^ Cannot call impure function
+  397 |       userId: user.username,
+  398 |       subject: config.subject,
+  399 |       difficulty: config.difficulty,                                                                                                                                                                                                                                                                                                                                                                                                            react-hooks/purity
+
+C:\Quiz Application\src\components\AIChatbot.tsx
+   6:3  warning  'MessageSquare' is defined but never used  @typescript-eslint/no-unused-vars
+   9:3  warning  'Sparkles' is defined but never used       @typescript-eslint/no-unused-vars
+  11:3  warning  'Terminal' is defined but never used       @typescript-eslint/no-unused-vars
+
+C:\Quiz Application\src\components\AppState.tsx
+   52:7   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Quiz Application\src\components\AppState.tsx:52:7
+  50 |     const localUser = MockDatabase.getUser();
+  51 |     if (localUser) {
+> 52 |       setUser(localUser);
+     |       ^^^^^^^ Avoid calling setState() directly within an effect
+  53 |       // Fetch quiz attempts history from backend database
+  54 |       fetch(`/api/attempts?username=${localUser.username}`)
+  55 |         .then(res => res.json())  react-hooks/set-state-in-effect
+  137:11  error  'audioCtx' is never reassigned. Use 'const' instead                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             prefer-const
+  137:61  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+
+C:\Quiz Application\src\components\Navbar.tsx
+  9:15  warning  'SettingsIcon' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Quiz Application\src\lib\db\DsaDbServer.ts
+  618:50  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  619:53  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  625:18  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  627:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  702:16  warning  'err' is defined but never used           @typescript-eslint/no-unused-vars
+  720:51  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  721:54  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  767:31  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  800:48  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  825:30  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Quiz Application\src\lib\db\mockDb.ts
+    4:10  warning  'quickSortScores' is defined but never used  @typescript-eslint/no-unused-vars
+  210:39  error    Unexpected any. Specify a different type     @typescript-eslint/no-explicit-any
+  211:32  error    Unexpected any. Specify a different type     @typescript-eslint/no-explicit-any
+  214:60  error    Unexpected any. Specify a different type     @typescript-eslint/no-explicit-any
+
+C:\Quiz Application\src\lib\db\seedQuestions.ts
+  12:18  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Quiz Application\src\lib\dsa\HashMap.ts
+  13:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Quiz Application\src\lib\dsa\Heap.ts
+  61:11  error  'left' is never reassigned. Use 'const' instead   prefer-const
+  62:11  error  'right' is never reassigned. Use 'const' instead  prefer-const
+
+C:\Quiz Application\src\lib\dsa\Trie.ts
+   4:18  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  11:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  37:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  50:20  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  73:47  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 132 problems (74 errors, 58 warnings)
+  3 errors and 0 warnings potentially fixable with the `--fix` option.

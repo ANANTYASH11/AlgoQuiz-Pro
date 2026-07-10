@@ -1,0 +1,85 @@
+[
+  {
+    "username": "SystemAdmin",
+    "email": "admin@algoquiz.pro",
+    "password": "adminpassword",
+    "role": "admin",
+    "level": 15,
+    "xp": 7500,
+    "coins": 1200,
+    "streak": 22,
+    "lastActive": "2026-07-07T16:59:24.589Z",
+    "rank": 1,
+    "accuracy": 94,
+    "weakSubjects": [],
+    "strongSubjects": [
+      "Data Structures",
+      "Algorithms",
+      "OS",
+      "DBMS",
+      "Networks"
+    ],
+    "badges": [
+      "Administrator",
+      "Omniscient"
+    ],
+    "bookmarks": [],
+    "favoriteQuestions": [],
+    "dailyRewardsClaimed": true
+  },
+  {
+    "username": "AlgoMaster",
+    "email": "student@algoquiz.pro",
+    "password": "studentpassword",
+    "role": "student",
+    "level": 2,
+    "xp": 1890,
+    "coins": 258,
+    "streak": 10,
+    "lastActive": "2026-07-09T22:27:40.573Z",
+    "rank": 10,
+    "accuracy": 25,
+    "weakSubjects": [
+      "Algorithms",
+      "DBMS"
+    ],
+    "strongSubjects": [
+      "Data Structures",
+      "JavaScript"
+    ],
+    "badges": [
+      "Fast Learner",
+      "Streak Beginner"
+    ],
+    "bookmarks": [
+      1,
+      5
+    ],
+    "favoriteQuestions": [
+      2
+    ],
+    "dailyRewardsClaimed": true
+  },
+  {
+    "level": 1,
+    "xp": 100,
+    "coins": 80,
+    "streak": 2,
+    "lastActive": "2026-07-07T17:21:05.926Z",
+    "rank": 99,
+    "accuracy": 0,
+    "weakSubjects": [],
+    "strongSubjects": [],
+    "badges": [
+      "First Steps"
+    ],
+    "bookmarks": [],
+    "favoriteQuestions": [],
+    "dailyRewardsClaimed": false,
+    "role": "student",
+    "username": "dsacoder",
+    "email": "dsacoder@algoquiz.pro",
+    "password": "mydsapassword",
+    "avatar": "👨‍💻"
+  }
+]
